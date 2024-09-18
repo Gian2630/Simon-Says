@@ -1,0 +1,257 @@
+:root{
+  background-color: black;
+}
+html, body {
+  overflow: hidden; 
+}
+
+.App {
+  text-align: center;
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.App-header {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.title {
+  font-size: 5rem; 
+  margin-bottom: 20px; 
+  margin-top: -100px;
+}
+
+.colorCard {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.CardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  position: relative;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.game-container {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.startButton, .score {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius:50px;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  -ms-border-radius:50px;
+  -o-border-radius:50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.startButton {
+  font-size: 15px;
+}
+
+.score {
+  font-size: 50px;
+}
+
+.lost {
+  margin-top: -20px;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 50px;
+}
+
+.flash {
+  border: 2px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.red {
+  background-color: red;
+  top: -5px;
+  right: -5px;
+  border-top-right-radius: 10rem;
+  
+  &.flash {
+    background-color: rgb(239, 84, 84);
+  }
+}
+
+.blue {
+  background-color: blue;
+  bottom: -5px;
+  right: -5px;
+  border-bottom-right-radius: 10rem;
+  
+  &.flash {
+    background-color: rgb(103, 103, 251);
+  }
+}
+
+.green {
+  background-color: green;
+  top: -5px;
+  left: -5px;
+  border-top-left-radius: 10rem;
+  
+  &.flash {
+    background-color: rgba(110, 246, 110, 0.845);
+  }
+}
+
+.yellow {
+  background-color: yellow;
+  bottom: -5px;
+  left: -5px;
+  border-bottom-left-radius: 10rem;
+  
+  &.flash {
+    background-color:  rgb(250, 250, 109);
+  }
+}
+
+.startButton:hover, .score:hover {
+  background-color: #333;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.colorCard:hover {
+  transform: scale(1.05);
+}
+
+.difficulty-selector button{
+  padding: 10px 20px;
+  background-color: var(--color-grey);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.close {
+  padding: 10px 20px;
+  margin-top: 70px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #5a5757;
+}
+
+.difficulty-selector button:hover {
+  background-color: #333;
+}
+
+.difficulty-selector button:disabled {
+  background-color: #666;
+  cursor: not-allowed;
+}
+
+.difficulty-selector button.active {
+  background-color: #333; 
+  color: white;
+}
+
+/* Media-queries*/
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 3rem;  /* Reduce el tamaño del título */
+    margin-top: -50px; /* Ajusta el margen superior */
+  }
+
+  .game-container {
+    transform: scale(0.8);  /* Escala todo el juego */
+  }
+
+  .difficulty-selector button {
+    padding: 8px 10px; /* Reduce el padding */
+    font-size: 10px;   /* Reduce el tamaño de la fuente */
+    margin-left: 5px;  /* Reduce el espacio entre botones */
+  }
+
+  .colorCard {
+    width: 100px; /* Reduce el tamaño de las tarjetas */
+    height: 100px;
+  }
+
+  .CardWrapper {
+    width: 200px; /* Reduce el tamaño del contenedor circular */
+    height: 200px;
+  }
+
+  .startButton, .score {
+    width: 70px; /* Reduce el tamaño de los botones */
+    height: 70px;
+    font-size: 12px; /* Reduce el tamaño de fuente en los botones */
+  }
+}
