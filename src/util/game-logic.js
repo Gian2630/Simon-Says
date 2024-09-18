@@ -38,7 +38,7 @@ const GameLogic = (colorList, difficulty, isOn) => {
 
   const displayColors = async () => {
     const delay = 1000 / difficulty
-    await timeout(delay)
+    await timeout(1000)
 
     for (let i = 0; i < play.colors.length; i++) {
       setFlashColor(play.colors[i])
@@ -81,10 +81,10 @@ const GameLogic = (colorList, difficulty, isOn) => {
           });
         }
       } else {
-        await timeout(1000)
+        await timeout(500)
         setPlay({ ...initPlay, score: play.colors.length })
       }
-      await timeout(delay)
+      await timeout(500)
       setFlashColor("")
     }
   };
