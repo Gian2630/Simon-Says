@@ -225,33 +225,33 @@ html, body {
 
 @media (max-width: 400px) {
   .title {
-    font-size: 3rem;  /* Reduce el tamaño del título */
-    margin-top: -50px; /* Ajusta el margen superior */
+    font-size: 3rem; 
+    margin-top: -50px;
   }
 
   .game-container {
-    transform: scale(0.8);  /* Escala todo el juego */
+    transform: scale(0.8);  
   }
 
   .difficulty-selector button {
-    padding: 8px 10px; /* Reduce el padding */
-    font-size: 10px;   /* Reduce el tamaño de la fuente */
-    margin-left: 5px;  /* Reduce el espacio entre botones */
+    padding: 8px 10px; 
+    font-size: 10px;   
+    margin-left: 5px;  
   }
 
   .colorCard {
-    width: 100px; /* Reduce el tamaño de las tarjetas */
+    width: 100px; 
     height: 100px;
   }
 
   .CardWrapper {
-    width: 200px; /* Reduce el tamaño del contenedor circular */
+    width: 200px; 
     height: 200px;
   }
 
   .startButton, .score {
-    width: 70px; /* Reduce el tamaño de los botones */
+    width: 70px; 
     height: 70px;
-    font-size: 12px; /* Reduce el tamaño de fuente en los botones */
+    font-size: 12px; 
   }
 }
