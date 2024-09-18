@@ -1,7 +1,7 @@
-### Tecnologias utilizadas
+# Tecnologias utilizadas
 
-# Javascript
+### Javascript
 
-# React
+### React
 
-# CSS
+### CSS
